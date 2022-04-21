@@ -1,5 +1,6 @@
-// Declaracion de constante para el boton encriptar y de las llaves de encriptacion
+// Declaracion de constante para el boton encriptar, elementos de mensaje no encontrado y de las llaves de encriptacion
 const botonEncriptar = document.querySelector("#boton-encriptar");
+const elementosMensajeNE = document.querySelector(".elementos-no-hay-texto");
 const llaves = {
     "a": "ai",
     "e": "enter",
@@ -9,10 +10,20 @@ const llaves = {
 };
 
 // Event listener para el boton de encriptar al hacer click en el
-botonEncriptar.addEventListener("click", () => {
-    // Declaracion de constantes del texto de entrada y su tamaño
+botonEncriptar.addEventListener("click", (e) => {
+    e.preventDefault();
+    // Declaracion de constantes del texto de entrada y su tamaño, tambien el de salida
     const textIn = document.querySelector(".text-in").value;
     const len = textIn.length;
+    const textOut = document.querySelector(".text-out");
+
+    // Validando texto de entrada
+    if (!validarTextoIn(textIn, len)) {
+        textOut.textContent = '';
+        mostrarMensajeNoEncontrado();
+        // Parpeadar nota de solo letras minusculas y sin acentos *******PENDIENTE*********
+        return;
+    }
     
     // Iterando por cada caracter del texto entrada
     let textoBuffer = "";
@@ -28,6 +39,29 @@ botonEncriptar.addEventListener("click", () => {
     }
     
     // Poner el texto codificado a textOut (p)
-    const textOut = document.querySelector(".text-out");
+    ocultarMensajeNoEncontrado();
     textOut.textContent = textoBuffer;
 });
+
+// Esta funcion se encarga de ocultar la imagen y los mensajes de cuando no encuentra un mensaje en el textarea
+function ocultarMensajeNoEncontrado() {
+    elementosMensajeNE.classList.add("elementos-no-hay-texto-invisible");
+}
+
+function mostrarMensajeNoEncontrado() {
+    elementosMensajeNE.classList.remove("elementos-no-hay-texto-invisible");
+}
+
+// Esta funcion se encarga que el texto de entrada no este vacio y que tenga caracteres validos
+function validarTextoIn(textIn, len) {
+    // Eliminando espacios del texto y almacenandolo en una variable
+    let textoTemp = textIn;
+    textoTemp.replace(/\s/g, '');
+    // Este regex detecta el alfabeto en mayuscula, los caracteres que no son letras y los numeros
+    const charsInvalidos = /[A-Z]|\W|\d/g;
+    // Si el texto tiene algunos de los caracteres invalidos o si el texto esta vacio, retorna falso significando que el texto no es valido
+    if (charsInvalidos.test(textoTemp) || len == 0) {
+        return false;
+    }
+    return true;
+}

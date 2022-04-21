@@ -11,11 +11,20 @@
 
     <body>
         <main>
-            <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
-            <p class="text-out"></p>
-            <img class="imagen-no-texto" src="images/no-texto.svg">
-            <button id="boton-encriptar" class="boton">Encriptar</button>
-            <button id="boton-desencriptar" class="boton">Desencriptar</button>
+            <form class="entrada-datos">
+                <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
+                <button id="boton-encriptar" class="boton">Encriptar</button>
+                <button id="boton-desencriptar" class="boton">Desencriptar</button>
+            </form>
+            <section class="salida-datos">
+                <p class="text-out"></p>
+                <div class="elementos-no-hay-texto">
+                    <img class="imagen-no-texto" src="images/no-texto.svg">
+                    <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
+                    <p class="submensaje-no-texto">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </section>
+            
         </main>
     </body>
 
