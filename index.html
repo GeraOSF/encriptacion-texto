@@ -7,12 +7,16 @@
         <link rel="icon" href="images/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <main>
             <form class="entrada-datos">
                 <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
+                <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
                 <button id="boton-encriptar" class="boton">Encriptar</button>
                 <button id="boton-desencriptar" class="boton">Desencriptar</button>
             </form>
@@ -23,6 +27,7 @@
                     <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
                     <p class="submensaje-no-texto">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
+                <button id="boton-copiar" class="boton">Copiar</button>
             </section>
             
         </main>
