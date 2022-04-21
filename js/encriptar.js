@@ -1,7 +1,8 @@
-// Declaracion de constante para el boton encriptar, elementos de mensaje no encontrado y de las llaves de encriptacion
+// Declaracion de constantes
 const botonEncriptar = document.querySelector("#boton-encriptar");
 const elementosMensajeNE = document.querySelector(".elementos-no-hay-texto");
-const llaves = {
+const textOut = document.querySelector(".text-out");
+const llavesEncriptar = {
     "a": "ai",
     "e": "enter",
     "i": "imes",
@@ -12,14 +13,12 @@ const llaves = {
 // Event listener para el boton de encriptar al hacer click en el
 botonEncriptar.addEventListener("click", (e) => {
     e.preventDefault();
-    // Declaracion de constantes del texto de entrada y su tamaño, tambien el de salida
+    // Declaracion de constantes del texto de entrada y su tamaño
     const textIn = document.querySelector(".text-in").value;
     const len = textIn.length;
-    const textOut = document.querySelector(".text-out");
 
     // Validando texto de entrada
     if (!validarTextoIn(textIn, len)) {
-        textOut.textContent = '';
         mostrarMensajeNoEncontrado();
         // Parpeadar nota de solo letras minusculas y sin acentos *******PENDIENTE*********
         return;
@@ -29,8 +28,8 @@ botonEncriptar.addEventListener("click", (e) => {
     let textoBuffer = "";
     for (let i = 0; i < len; i++) {
         // Si el caracter esta en llaves, concatenar el valor de esa llave en textoBuffer
-        if (textIn[i] in llaves) {
-            textoBuffer += llaves[textIn[i]];
+        if (textIn[i] in llavesEncriptar) {
+            textoBuffer += llavesEncriptar[textIn[i]];
         }
         // Si no esta en llaves, concatenar el caracter sin modificarlo 
         else {
@@ -38,7 +37,7 @@ botonEncriptar.addEventListener("click", (e) => {
         }
     }
     
-    // Poner el texto codificado a textOut (p)
+    // Mostrar el texto decodificado a textOut (p)
     ocultarMensajeNoEncontrado();
     textOut.textContent = textoBuffer;
 });
@@ -49,6 +48,7 @@ function ocultarMensajeNoEncontrado() {
 }
 
 function mostrarMensajeNoEncontrado() {
+    textOut.textContent = '';
     elementosMensajeNE.classList.remove("elementos-no-hay-texto-invisible");
 }
 
