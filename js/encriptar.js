@@ -55,8 +55,7 @@ function mostrarMensajeNoEncontrado() {
 // Esta funcion se encarga que el texto de entrada no este vacio y que tenga caracteres validos
 function validarTextoIn(textIn, len) {
     // Eliminando espacios del texto y almacenandolo en una variable
-    let textoTemp = textIn;
-    textoTemp.replace(/\s/g, '');
+    let textoTemp = textIn.replace(/\s/g, '');
     // Este regex detecta el alfabeto en mayuscula, los caracteres que no son letras y los numeros
     const charsInvalidos = /[A-Z]|\W|\d/g;
     // Si el texto tiene algunos de los caracteres invalidos o si el texto esta vacio, retorna falso significando que el texto no es valido
