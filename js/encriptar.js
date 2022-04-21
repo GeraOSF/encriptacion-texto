@@ -44,12 +44,12 @@ botonEncriptar.addEventListener("click", (e) => {
 
 // Esta funcion se encarga de ocultar la imagen y los mensajes de cuando no encuentra un mensaje en el textarea
 function ocultarMensajeNoEncontrado() {
-    elementosMensajeNE.classList.add("elementos-no-hay-texto-invisible");
+    elementosMensajeNE.classList.add("invisible");
 }
 
 function mostrarMensajeNoEncontrado() {
     textOut.textContent = '';
-    elementosMensajeNE.classList.remove("elementos-no-hay-texto-invisible");
+    elementosMensajeNE.classList.remove("invisible");
 }
 
 // Esta funcion se encarga que el texto de entrada no este vacio y que tenga caracteres validos

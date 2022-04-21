@@ -15,7 +15,12 @@ botonDesencriptar.addEventListener("click", (e) => {
 
     // Reemplazando cada patron por sus vocales correspondientes
     let textoBuffer = textIn;
-    textoBuffer = textoBuffer.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+    textoBuffer = textoBuffer
+        .replace(/ai/g, 'a')
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
 
     // Mostrar el texto decodificado a textOut (p)
     ocultarMensajeNoEncontrado();
