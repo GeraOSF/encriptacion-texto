@@ -1,4 +1,4 @@
-// Declaracion de constante para el boton y de las llaves
+// Declaracion de constante para el boton encriptar y de las llaves de encriptacion
 const botonEncriptar = document.querySelector("#boton-encriptar");
 const llaves = {
     "a": "ai",
