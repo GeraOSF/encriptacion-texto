@@ -13,17 +13,22 @@
     </head>
 
     <body>
+        <header>
+            <img src="images/logo.png">
+        </header>
         <main>
-            <form class="entrada-datos">
-                <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
-                <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
-                <button id="boton-encriptar" class="boton">Encriptar</button>
-                <button id="boton-desencriptar" class="boton">Desencriptar</button>
-            </form>
+            <section class="entrada-datos">
+                <form>
+                    <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
+                    <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
+                    <button id="boton-encriptar" class="boton">Encriptar</button>
+                    <button id="boton-desencriptar" class="boton">Desencriptar</button>
+                </form>
+            </section>
             <section class="salida-datos">
                 <p class="text-out"></p>
                 <div class="elementos-no-hay-texto">
-                    <img class="imagen-no-texto" src="images/no-texto.svg">
+                    <img class="imagen-no-texto" src="images/no-texto.svg" alt="imagen de una caricatura analizando un diamante">
                     <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
                     <p class="submensaje-no-texto">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
