@@ -1,5 +1,6 @@
 // Declaracion de constantes
 const botonEncriptar = document.querySelector("#boton-encriptar");
+const botonCopiar = document.querySelector("#boton-copiar");
 const elementosMensajeNE = document.querySelector(".elementos-no-hay-texto");
 const textOut = document.querySelector(".text-out");
 const llavesEncriptar = {
@@ -20,7 +21,7 @@ botonEncriptar.addEventListener("click", (e) => {
     // Validando texto de entrada
     if (!validarTextoIn(textIn, len)) {
         mostrarMensajeNoEncontrado();
-        // Parpeadar nota de solo letras minusculas y sin acentos *******PENDIENTE*********
+        alert("Mensaje invalido.")
         return;
     }
     
@@ -45,11 +46,13 @@ botonEncriptar.addEventListener("click", (e) => {
 // Esta funcion se encarga de ocultar la imagen y los mensajes de cuando no encuentra un mensaje en el textarea
 function ocultarMensajeNoEncontrado() {
     elementosMensajeNE.classList.add("invisible");
+    botonCopiar.classList.remove("invisible");
 }
 
 function mostrarMensajeNoEncontrado() {
     textOut.textContent = '';
     elementosMensajeNE.classList.remove("invisible");
+    botonCopiar.classList.add("invisible");
 }
 
 // Esta funcion se encarga que el texto de entrada no este vacio y que tenga caracteres validos
