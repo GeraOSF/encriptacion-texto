@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Encriptador de texto</title>
-        <link rel="icon" href="images/logo.png" type="image/x-icon">
+        <link rel="icon" href="images/logo.svg" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -14,19 +14,23 @@
 
     <body>
         <header>
-            <img src="images/logo.png">
+            <img src="images/logo.svg">
         </header>
         <main>
             <section class="entrada-datos">
                 <form>
                     <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui"></textarea>
                     <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
-                    <button id="boton-encriptar" class="boton">Encriptar</button>
-                    <button id="boton-desencriptar" class="boton">Desencriptar</button>
+                    <div class="area-botones">
+                        <button id="boton-encriptar" class="boton">Encriptar</button>
+                        <button id="boton-desencriptar" class="boton">Desencriptar</button>
+                    </div>
                 </form>
             </section>
             <section class="salida-datos">
-                <p class="text-out"></p>
+                <div class="area-texto-out">
+                    <p class="text-out"></p>
+                </div>
                 <div class="elementos-no-hay-texto">
                     <img class="imagen-no-texto" src="images/no-texto.svg" alt="imagen de una caricatura analizando un diamante">
                     <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
@@ -34,8 +38,12 @@
                 </div>
                 <button id="boton-copiar" class="boton">Copiar</button>
             </section>
-            
         </main>
+        <footer>
+            <div>
+                s
+            </div>
+        </footer>
     </body>
 
     <script src="js/encriptar.js"></script>
