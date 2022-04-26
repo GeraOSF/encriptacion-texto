@@ -25,6 +25,10 @@ main {
     color: #0A3871;
 }
 
+.text-in::placeholder {
+    color: #0A3871;
+}
+
 .nota {
     font-size: 0.8rem;
     padding: 0.5em;
