@@ -14,29 +14,29 @@
 
     <body>
         <header>
-            <img src="images/logo.svg">
+            <img class="header-logo" src="images/logo.svg">
         </header>
         <main>
             <section class="entrada-datos">
-                <form>
-                    <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui" spellcheck="false"></textarea>
-                    <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
-                    <div class="area-botones">
-                        <button id="boton-encriptar" class="boton">Encriptar</button>
-                        <button id="boton-desencriptar" class="boton">Desencriptar</button>
-                    </div>
-                </form>
+                <textarea class="text-in" type="text" placeholder="Ingrese el texto aqui" spellcheck="false"></textarea>
+                <p class="nota">&#128712; Solo letras minúsculas y sin acentos</p>
+                <div class="area-botones">
+                    <button id="boton-encriptar" class="boton">Encriptar</button>
+                    <button id="boton-desencriptar" class="boton">Desencriptar</button>
+                </div>
             </section>
             <section class="salida-datos">
-                <div class="area-texto-out">
-                    <p class="text-out"></p>
+                <div class="v-align">
+                    <div class="area-texto-out">
+                        <p class="text-out"></p>
+                    </div>
+                    <div class="elementos-no-hay-texto">
+                        <img class="imagen-no-texto" src="images/no-texto.svg" alt="imagen de una caricatura analizando un diamante">
+                        <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
+                        <p class="submensaje-no-texto">Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+                    <button id="boton-copiar" class="boton invisible">Copiar</button>
                 </div>
-                <div class="elementos-no-hay-texto">
-                    <img class="imagen-no-texto" src="images/no-texto.svg" alt="imagen de una caricatura analizando un diamante">
-                    <p class="mensaje-no-texto">Ningún mensaje fue encontrado</p>
-                    <p class="submensaje-no-texto">Ingresa el texto que desees encriptar o desencriptar</p>
-                </div>
-                <button id="boton-copiar" class="boton invisible">Copiar</button>
             </section>
         </main>
         <footer>
