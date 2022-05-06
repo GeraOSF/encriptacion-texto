@@ -130,7 +130,32 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     grid-area: footer;
+    text-align: center;
+    color: #495057;
+    font-family: "Inter", "sans-seriff";
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(#f5f0e9, #f9cc91);
+}
+
+.realizado-por {
+    padding: 0.5em;
+}
+
+.links-contacto > li {
+    width: 3em;
+    height: 3em;
+    display: inline-block;
+    padding: 1em;
+}
+
+li img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .invisible {
