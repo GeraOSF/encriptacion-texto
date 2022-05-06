@@ -122,6 +122,10 @@ main {
     font-size: 1rem;
 }
 
+.text-out {
+    font-size: 2rem;
+}
+
 #boton-copiar {
     background-color: #fefefe;
     border-color: #d38a24;
